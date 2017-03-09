@@ -31,7 +31,7 @@ matchToPair m =
     submatchPair =
       getSubmatchPair m
   in
-    ( fst submatchPair, Result.withDefault 0 <| toInt <| snd submatchPair )
+    ( Tuple.first submatchPair, Result.withDefault 0 <| toInt <| Tuple.second submatchPair )
 
 
 getSubmatchPair : Match -> ( String, String )
